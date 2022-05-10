@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+
+<style>
+   .body{
+     font-family: Arial, Helvetica, sans-serif;
+   }
+    .logo_name img{
+      height: 70px;
+      width: 75px
+    }
+    .logo_name .name{
+      font-style: italic;
+      font-size: 45px;
+      font-weight: bold;
+
+    }
+    .header .logo_name{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-grow: 2;
+    }
+    .header{
+      display: flex;
+      flex-direction: row;
+      /* padding-left: 50px;
+      padding-right: 50px; */
+      padding: 1vw;
+    } 
+    
+    .header .btn{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    #btn_type1, #btn_trip_designer{
+      background-color: white;
+      border-radius: 20px;
+      color: black;
+      font-family: Comic Sans MS;
+    }
+
+    #btn_type3{
+      background-color: white;
+      border-radius: 20px;
+      color: black;
+      font-family: Comic Sans MS;
+    }
+
+    #btn_type2{
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      font-family: Comic Sans MS;
+    }
+
+    #btn_type1:hover, #btn_trip_designer:hover{
+     background-color: rgb(194, 189, 189);
+     color: black;
+     transition: .5s;
+     cursor: pointer;
+     border-radius: 20px;
+    }
+
+    #btn_type3:hover{
+     background-color: rgb(194, 189, 189);
+     color: black;
+     transition: .5s;
+     cursor: pointer;
+     border-radius: 20px;
+    }
+
+    .main{
+      width: 100%;
+      height: 65%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-image: url(./image/st_home_background.jpg); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      justify-content: center;
+      padding: 1vw;
+    }
+    
+    .main .search_btn{
+         background-color: white;
+         border: 1px solid #fff;
+         border-radius: 20px;
+         padding: 1%;
+         width: 50%;
+         text-align: left;
+         font-size: 17px;
+    }
+    .main .search_btn .src_btn {
+      background-color: white;
+      border: none;
+    }
+
+    .src{
+      color: gray;
+      border: 1px solid white;
+
+    }
+    
+</style>
+<body>
+    <header class="header">
+        <div class="logo_name">
+            <img src="./image/st_logo.jpg" height="70px" width="40px">
+            <h2 class="name">Swift Travel</h2>
+        </div>
+
+        <div class="btn" >
+            <div class="ui animated button" tabindex="0" id="btn_type1">
+                <div class="visible content" id="vs_con">Home</div>
+                <div class="hidden content">
+                  <i class="home icon"></i>
+                </div>
+              </div>
+              <div class="ui vertical animated button" tabindex="0" id="btn_type3">
+                <div class="visible content" id="vs_con">
+                   Tourist Spot
+                </div>
+                <div class="hidden content">
+                  <i class="map marker icon"></i>
+                </div>
+              </div>
+              <a href="trip_designer.php"><div class="ui vertical animated button" tabindex="0" id="btn_trip_designer">
+                <div class="visible content" id="vs_con">
+                   Trip Designer
+                </div>
+                <div class="hidden content">
+                  <i class="edit icon"></i>
+                </div>
+              </div></a>
+
+              
+
+              <div class="ui animated fade button" tabindex="0" id="btn_type2">
+                <div class="visible content">Sign-up / Log in</div>
+                <div class="hidden content">
+                  <i class="handshake outline icon"></i>
+                </div>
+              </div>
+        </div>
+    </header>
+    <main class="main">
+              <form class="search_btn" action="destination.php" method="POST">
+                <button class="src_btn" type="submit"><i class="search icon"></i></button> 
+                <input class="src" type="text" placeholder="Where To? " name="search_input">
+              </form>     
+    </main>
+
+   <script>
+
+        document.getElementById("btn_type1").onclick = function () {
+            location.href = "index.html";
+    };
+        document.getElementById("btn_type3").onclick = function () {
+            location.href = "tourist_spot.php";
+    };   
+    document.getElementById("btn_type2").onclick = function () {
+       location.href = "sign_up.html";
+};   
+   </script>
+</body>
+</html>

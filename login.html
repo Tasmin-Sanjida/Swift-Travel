@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href='style.css'>
+    <script src="http://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+</head>
+<style>
+
+    .logo_name img{
+      height: 70px;
+      width: 75px
+    }
+    .logo_name .name{
+      font-style: italic;
+      font-size: 45px;
+      font-weight: bold;
+      color: black;
+
+    }
+    .header .logo_name{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-grow: 2;
+      color: black;
+    }
+    .header{
+      display: flex;
+      flex-direction: row;
+      /* padding-left: 50px;
+      padding-right: 50px; */
+      padding: 1vw;
+      padding-bottom: 1%;
+    } 
+    
+    .header .btn{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+     
+    #btn_type1{
+      background-color: black;
+      border-radius: 20px;
+      color: white;
+      font-family: Comic Sans MS;
+      padding-right: 5vw;
+    }
+
+</style>
+<body>
+    <header class="header">
+        <div class="logo_name">
+            <img src="./image/st_logo.jpg" height="70px" width="40px">
+            <h2 class="name">Swift Travel</h2>
+        </div>
+  
+        <div class="btn" >
+            <div class="ui animated button" tabindex="0" id="btn_type1">
+                <div class="visible content">Home</div>
+                <div class="hidden content">
+                  <i class="home icon"></i>
+                </div>
+              </div>
+        </div>
+    </header>
+    <div class="hero">
+
+        <form action="login_info.php" method="POST"> 
+            <h2> Log in </h2>
+
+            <div class="input-group">
+                <input type="email" id="email" required name="mail">
+            <label for="email"><i class="fas fa-envelope"></i> Email Id</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" required name="pass">
+            <label for="password"><i class="fa fa-key" aria-hidden="true"></i> Password</label>
+            </div>
+            
+            
+            <button type="submit"><i class="fas fa-paper-plane"></i> Log in</button>
+
+            <div class="input-group">
+            <label><p> No have an account? <a href="sign_up.html"> Sign-up here </a> </p></label>
+            </div>
+
+        </form>
+    </div>
+    <script>
+
+        document.getElementById("btn_type1").onclick = function () {
+            location.href = "index.html";
+        };
+    
+    </script>
+</body>
+</html>
